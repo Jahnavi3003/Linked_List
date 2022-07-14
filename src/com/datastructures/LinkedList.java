@@ -7,11 +7,21 @@ Node head = null;
 
    public void addFirst (int data) {
 	   Node node = new Node(data);
-	   node.setData(data);
 	   node.setNext(head);
 	   head=node;
    }
 	
+   public void append(int data) {
+	   Node currentNode=head;
+	   while(currentNode.next != null) {
+		  
+		   currentNode = currentNode.next;
+		   
+	   }
+	   Node node = new Node (data);
+	   currentNode.next=node;
+	   
+   }
 	public void print() {
 		Node currentNode = head;
 		System.out.println("Linked-List :- ");           
@@ -29,9 +39,9 @@ Node head = null;
 		
 		LinkedList linkedList = new LinkedList();   
 		
-		linkedList.addFirst(70);                
-		linkedList.addFirst(30);          
-		linkedList.addFirst(56);          										
+		linkedList.addFirst(56);                
+		linkedList.append(30);          
+		linkedList.append(70);          										
 										
 			
 		linkedList.print();  
