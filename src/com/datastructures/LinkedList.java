@@ -3,6 +3,14 @@ package com.datastructures;
 public class LinkedList {
 	
 Node head = null;  
+
+
+   public void addFirst (int data) {
+	   Node node = new Node(data);
+	   node.setData(data);
+	   node.setNext(head);
+	   head=node;
+   }
 	
 	public void print() {
 		Node currentNode = head;
@@ -21,11 +29,10 @@ Node head = null;
 		
 		LinkedList linkedList = new LinkedList();   
 		
-		linkedList.head = new Node(56);                
-		Node node2 = new Node(30);          
-		Node node3 = new Node(70);          										
-		linkedList.head.next = node2;       
-		node2.next = node3;									
+		linkedList.addFirst(70);                
+		linkedList.addFirst(30);          
+		linkedList.addFirst(56);          										
+										
 			
 		linkedList.print();  
 	}	
