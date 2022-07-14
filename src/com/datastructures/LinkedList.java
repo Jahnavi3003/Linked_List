@@ -22,6 +22,18 @@ Node head = null;
 	   currentNode.next=node;
 	   
    }
+   
+   public void insert(int old_data , int data) {
+		Node currentNode = head;
+		while(currentNode.data != old_data) {
+			currentNode = currentNode.next;          
+		}
+		Node node = new Node(data);
+		node.next = currentNode.next;
+		currentNode.next = node;
+	}
+   
+   
 	public void print() {
 		Node currentNode = head;
 		System.out.println("Linked-List :- ");           
@@ -40,8 +52,8 @@ Node head = null;
 		LinkedList linkedList = new LinkedList();   
 		
 		linkedList.addFirst(56);                
-		linkedList.append(30);          
-		linkedList.append(70);          										
+		linkedList.append(70);          
+		linkedList.insert(56,30);          										
 										
 			
 		linkedList.print();  
